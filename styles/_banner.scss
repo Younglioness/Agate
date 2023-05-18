@@ -1,0 +1,36 @@
+.banner {
+    padding: 218px 0 185px;
+}
+
+.banner__title {
+    font-size: 5.3125rem;
+    color: $text-color;
+    max-width: 914px;
+    margin: 0 auto 35px;
+}
+
+.banner__text {
+    font-weight: 400;
+    font-size: $description-font;
+    color: $text-color;
+    margin: 0 auto 60px;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .banner__title {
+        font-size: 3.75rem;
+        width: 697px;
+    }
+    .banner__text {
+        font-size: 1.125rem;
+        width: 430px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner__title {
+        font-size: 3.1255rem;
+        width: 329px;
+    }
+}

@@ -1,0 +1,193 @@
+.course {
+    max-width: 360px;
+    width: calc((100% - 2*48px)/3);
+    text-align: left;
+    position: relative;
+    &:not(:last-of-type) {
+        margin-right: 48px;
+    }
+    &__item-picture {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.course-content {
+    margin-top: 35px;
+    &__item-subtitle {
+        font-size: 1.875rem;
+        font-weight: 400;
+    }
+    &__item-description {
+        font-size: 1.125rem;
+        font-weight: 300;
+        line-height: 23px;
+        color: $second-color;
+        margin: 15px 0;
+    }
+    &__item-price {
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+}
+
+.course--red::before {
+    @include pseudo("HOT!", #D33B3B);
+}
+
+.course--green::before {
+    @include pseudo("NEW!", #B3E151);
+}
+
+.course--orange::before {
+    @include pseudo("HIT!", #E5A434);
+}
+
+@media screen and (max-width: 1250px) {
+    .course {
+        max-width: 310px;
+        width: calc((100% - 2*30px)/3);
+        &:not(:last-of-type) {
+            margin-right: 30px;
+        }
+        &::before {
+            @include pseudo1250;
+        }
+    }
+    .course-content {
+        &__item-description {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .course {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .course {
+        max-width: 253px;
+        width: calc((100% - 2*92px)/3);
+        &:not(:last-of-type) {
+            margin-right: 92px;
+        }
+        &::before {
+            @include pseudo1024;
+        }
+    }
+    .course-content {
+        margin-top: 15px;
+        &__item-subtitle {
+            font-size: 1.5625rem;
+        }
+        &__item-description {
+            font-size: 0.93rem;
+            line-height: 19px;
+            margin: 15px 0 17px;
+        }
+        &__item-price {
+            font-size: 0.9375rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .course {
+        max-width: 220px;
+        width: calc((100% - 2*42px)/3);
+        &:not(:last-of-type) {
+            margin-right: 42px;
+        }
+        &::before {
+            @include pseudo1250;
+        }
+    }
+    .course-content {
+        &__item-description {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .course {
+        max-width: 200px;
+        width: calc((100% - 2*32px)/3);
+        &:not(:last-of-type) {
+            margin-right: 32px;
+        }
+    }
+    .course-content {
+        &__item-description {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .course {
+        max-width: 692px;
+        width: 100%;
+        display: flex;
+        &:not(:last-of-type) {
+            margin-right: 0;
+            margin-bottom: 58px;
+        }
+        &::before {
+            @include pseudo768;
+        }
+        &__item-picture {
+            max-width: 320px;
+        }
+    }
+    .course-content {
+        text-align: left;
+        max-width: 348px;
+        padding-top: 17px;
+        margin: 0 0 0 24px;
+        &__item-description {
+            font-size: 1.25rem;
+            line-height: 25px;
+            margin: 20px 0;
+        }
+        &__item-price {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .course {
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        &:not(:last-of-type) {
+            margin-bottom: 48px;
+        }
+        &__item-picture {
+            max-width: 300px;
+        }
+    }
+    .course-content {
+        max-width: 300px;
+        padding: 0;
+        margin: 15px 0 0;
+        &__item-subtitle {
+            font-size: 1.25rem;
+        }
+        &__item-description {
+            margin: 15px 0;
+            font-size: 1.125rem;
+        }
+        &__item-price {
+            font-size: 1.125rem;
+        }
+    }
+}

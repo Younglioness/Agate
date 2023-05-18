@@ -1,0 +1,16 @@
+.heading {
+    font-size: 4.063rem;
+    color: $text-color;
+}
+
+@media screen and (max-width: 1024px) {
+    .heading {
+        font-size: 3.125rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: $subtitle-font;
+    }
+}
